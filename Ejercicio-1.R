@@ -195,33 +195,3 @@ ggplot()+
   geom_vline (xintercept = 0, linetype="dashed", size=1)+
   scale_fill_manual(values = c("indianred", "darkseagreen", "brown4"))+
   theme_minimal()
-
-
-
-
-
-terrenos_barrios <- left_join(barrios, terrenos, by="BARRIO")
-
-ggplot()+
-  geom_sf(data=terrenos_barrios, aes(fill=VARIACION), alpha=.75)+
-  scale_fill_continuous(limits=c(-100, 100), breaks=c(-100, -75, -50, -25, 0, 25, 50, 75, 100))+
-  geom_sf_text(data=terrenos_barrios, aes(label=round(VARIACION),0), size=4, fontface = "bold")+
-  scale_fill_viridis_c(alpha=.75)+
-  labs(title="Variaci?n porcentual por Barrio", 
-       subtitle = "Per?odo 2019-2020",
-       caption="Fuente: GCBA")+
-  theme_void()
-
-ggplot()+
-  geom_sf(data=terrenos_barrios %>% filter(VARIACION>=0), fill="chartreuse3")+
-  geom_sf(data=terrenos_barrios %>% filter(VARIACION<0), fill="brown1")+
-  scale_fill_continuous(limits=c(-100, 100), breaks=c(-100, -75, -50, -25, 0, 25, 50, 75, 100))+
-  geom_sf_text(data=terrenos_barrios, aes(label=BARRIO), size=1.5)+
-  labs(title="?Qu? barrios crecieron?", 
-       subtitle = "Per?odo 2019-2020",
-       caption="Fuente: GCBA")+
-  theme_void()
-
-
-
-
