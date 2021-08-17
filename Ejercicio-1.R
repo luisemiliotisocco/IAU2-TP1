@@ -97,7 +97,7 @@ skim (terrenos2018)
 # la media y la mediana son menores que el 2019, pero mayores que el 2020
 # se observa un crecimiento hacia 2019, con caída en el 2020
 # el desvío standard es de 1878 USD
-
+# no se registran terrenos en Puerto Madero
 
 # aprovechando que los sets de datos de 2018 y 2019 comparten la misma estructura, voy a crear funciones para sistematizar los pasos previos
 
