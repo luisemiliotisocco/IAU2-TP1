@@ -1,6 +1,5 @@
 library(tidyverse) # Easily Install and Load the 'Tidyverse', CRAN v1.3.0
 library(sf) # Simple Features for R, CRAN v1.0-0
-library(vroom) # Read and Write Rectangular Text Data Quickly 
 library(skimr) # Compact and Flexible Summaries of Data 
 options(scipen = 999) # Eliminar notación cientifica
 
@@ -195,6 +194,5 @@ ggplot()+
   geom_vline (xintercept = 0, linetype="dashed", size=1)+
   scale_fill_manual(values = c("indianred", "darkseagreen", "brown4"))+
   theme_minimal()
-
 
 write.csv(terrenos, "data/terrenos.csv") #guardo la información generada para levantarla luego
