@@ -194,5 +194,5 @@ ggplot()+
   geom_vline (xintercept = 0, linetype="dashed", size=1)+
   scale_fill_manual(values = c("indianred", "darkseagreen", "brown4"))+
   theme_minimal()
-
+ 
 write.csv(terrenos, "data/terrenos.csv") #guardo la información generada para levantarla luego
